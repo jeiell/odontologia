@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MN Odontologia Estética | Sorrisos Exclusivos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght=400;600&family=Montserrat:wght=200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+       --- TELA DE INTRODUÇÃO (AUTOMÁTICA) ---
+    ========================================== -->
+    <div class="intro-screen">
+        <video autoplay muted loop playsinline>
+            <source src="./assets/0_Film_Animation_1920x1080.mp4" type="video/mp4">
+        </video>
+        <div class="intro-overlay"></div>
+        
+        <div class="intro-content-box">
+            <h1 class="intro-title">MN ODONTOLOGIA</h1>
+            <p class="intro-subtitle">A Estética da Precisão</p>
+        </div>
+    </div>
+
+    <!-- --- HEADER / NAVEGAÇÃO --- -->
+    <header class="header">
+        <div class="logo">
+            <span class="brand-main">MN</span> <span class="brand-sub">ODONTOLOGIA</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="#inicio" class="nav-link active">Início</a>
+            <a href="#tratamentos" class="nav-link">Tratamentos</a>
+            <a href="#consultorio" class="nav-link">O Consultório</a>
+            <a href="#contato" class="nav-link contact-btn">Agendar Consulta</a>
+        </nav>
+    </header>
+
+    <!-- --- HERO SECTION --- -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <h1>A ARTE DE ESCULPIR <br><span class="highlight">SORRISOS EXCLUSIVOS</span></h1>
+            <p>Unindo alta tecnologia, precisão geométrica e estética avançada para transformar a sua saúde bucal em uma obra de arte.</p>
+            <a href="#tratamentos" class="btn-primary">Conheça os Tratamentos</a>
+        </div>
+    </section>
+
+    <!-- --- SEÇÃO DE TRATAMENTOS --- -->
+    <section id="tratamentos" class="services-section">
+        <div class="section-title reveal">
+            <h2>NOSSOS TRATAMENTOS</h2>
+            <div class="line-divider"></div>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="card-image">
+                    <img src="./assets/lente.jpg" alt="Lentes de Contato Dental">
+                </div>
+                <h3>Lentes de Contato Dental</h3>
+                <p>Correções milimétricas de cor, forma e alinhamento com facetas de porcelana ultra-finas e personalizadas.</p>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="card-image">
+                    <img src="./assets/implante.jpg" alt="Implantes & Carga Rápida">
+                </div>
+                <h3>Implantes & Carga Rápida</h3>
+                <p>Reabilitação oral funcional com precisão cirúrgica guiada por computador e rápida recuperação.</p>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="card-image">
+                    <img src="./assets/alinhadores.jpg" alt="Invisalign & Ortodontia">
+                </div>
+                <h3>Invisalign & Ortodontia</h3>
+                <p>Alinhadores invisíveis e tecnológicos que corrigem sua arcada de forma discreta, confortável e rápida.</p>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="card-image">
+                    <img src="./assets/47818.jpg" alt="Clareamento a Laser">
+                </div>
+                <h3>Clareamento a Laser</h3>
+                <p>Tecnologia fotoativada para a remoção de manchas profundas, devolvendo o brilho natural dos dentes.</p>
+            </div>
+        </div>
+    </section>
+    <!-- --- SEÇÃO ANTES E DEPOIS INTERATIVO --- -->
+<section class="before-after-section reveal">
+    <div class="section-title">
+        <h2>A PRECISÃO DO RESULTADO</h2>
+        <div class="line-divider"></div>
+        <p class="subtitle">Arraste a barra central para visualizar a transformação milimétrica.</p>
+    </div>
+
+    <div class="comparison-container">
+        <!-- Foto do Depois (Fica no fundo) -->
+        <div class="image-box after-image">
+            <img src="./assets/depois.jpg" alt="Sorriso Transformado">
+        </div>
+        <!-- Foto do Antes (Fica na frente, recortada pelo JS) -->
+        <div class="image-box before-image">
+            <img src="./assets/antes.jpg" alt="Sorriso Antes">
+        </div>
+        <!-- A Barra de Arrastar -->
+        <div class="slider-handle">
+            <div class="handle-line"></div>
+            <div class="handle-button"><span>&larr;&rarr;</span></div>
+            <div class="handle-line"></div>
+        </div>
+        <input type="range" min="0" max="100" value="50" class="slider-input" aria-label="Percentual de revelação da imagem">
+    </div>
+</section>
+
+    <!-- --- SEÇÃO O CONSULTÓRIO --- -->
+    <section id="consultorio" class="about-section">
+        <div class="about-glass-container reveal">
+            <div class="about-text">
+                <h2>O CONSULTÓRIO</h2>
+                <p>Projetado sob um concept minimalista, nosso espaço oferece um ambiente imersivo, focado no conforto absoluto do paciente e na aplicação de fluxos digitais integrados.</p>
+                <ul class="features-list">
+                    <li>
+                        <span>//</span> 
+                        <a href="#" onclick="abrirVideo(event, './assets/video1.mp4')" class="feature-link">Diagnóstico Digital em 3D</a>
+                    </li>
+                    <li>
+                        <span>//</span> 
+                        <a href="#" onclick="abrirVideo(event, './assets/video2.mp4')" class="feature-link">Atendimento Altamente Exclusivo</a>
+                    </li>
+                    <li>
+                        <span>//</span> 
+                        <a href="#" onclick="abrirVideo(event, './assets/video3.mp4')" class="feature-link">Tecnologia de Sedação Consciente</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- JANELA FLUTUANTE (MODAL) PARA O VÍDEO -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="fecharVideo()">&times; FECHAR</span>
+            <video id="modalVideo" controls playsinline>
+                <source src="" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+            </video>
+        </div>
+    </div>
+
+    <!-- --- SEÇÃO DE CONTATO --- -->
+    <section id="contato" class="contact-section">
+        <div class="contact-box reveal">
+            <h2>AGENDE SUA CONSULTA</h2>
+            <p>Experimente o mais alto padrão em odontologia estética.</p>
+            <form id="appointment-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Seu Nome Completo" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" placeholder="Seu WhatsApp" required>
+                </div>
+                <div class="input-group">
+                    <select required>
+                        <option value="" disabled selected>Selecione o Tratamento</option>
+                        <option value="lentes">Lentes de Contato Dental</option>
+                        <option value="implantes">Implantes & Carga Rápida</option>
+                        <option value="invisalign">Invisalign & Ortodontia</option>
+                        <option value="clareamento">Clareamento Avançado</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Solicitar Atendimento</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- --- FOOTER --- -->
+    <footer class="footer">
+        <p>&copy; 2026 MN Odontologia. Todos os direitos reservados.</p>
+        <p class="footer-signature">Designed by Natanael Teixeira</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
