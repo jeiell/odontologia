@@ -66,7 +66,64 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 4. Automação do Formulário de Agendamento via WhatsApp
+    inicializarFormularioWhatsapp();
 });
+
+/* ==========================================================================
+   --- FUNÇÃO AUXILIAR: ENVIO DO FORMULÁRIO PARA O WHATSAPP ---
+   ========================================================================== */
+function inicializarFormularioWhatsapp() {
+    const formAgendamento = document.getElementById('form-agendamento');
+    
+    // Se o formulário não existir nesta página específica, cancela silenciosamente sem travar a Intro
+    if (!formAgendamento) return; 
+
+    formAgendamento.addEventListener('submit', (e) => {
+        e.preventDefault(); // Evita o recarregamento da página que causava o loop na intro
+
+        // Captura os dados do formulário usando os IDs padrões do HTML
+        const nome = document.getElementById('nome').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const whatsapp = document.getElementById('whatsapp').value.trim();
+        const servico = document.getElementById('servico').value;
+        const data = document.getElementById('data').value;
+        const hora = document.getElementById('hora').value;
+        const mensagemAdicional = document.getElementById('mensagem').value.trim();
+
+        // Formata a data para o padrão brasileiro (DD/MM/AAAA)
+        let dataFormatada = data;
+        if (data) {
+            const partesData = data.split('-');
+            dataFormatada = `${partesData[2]}/${partesData[1]}/${partesData[0]}`;
+        }
+
+        // Monta o corpo do texto com formatação do WhatsApp (*Negrito*)
+        let textoMensagem = `Olá! Gostaria de solicitar um agendamento:\n\n`;
+        textoMensagem += `*Nome:* ${nome}\n`;
+        textoMensagem += `*E-mail:* ${email}\n`;
+        textoMensagem += `*WhatsApp:* ${whatsapp}\n`;
+        textoMensagem += `*Especialidade/Serviço:* ${servico}\n`;
+        textoMensagem += `*Data pretendida:* ${dataFormatada}\n`;
+        textoMensagem += `*Horário:* ${hora}\n`;
+
+        if (mensagemAdicional) {
+            textoMensagem += `*Observações:* ${mensagemAdicional}\n`;
+        }
+
+        // CONFIGURAÇÃO DO NÚMERO: Substitua pelo número real do consultório
+        // Formato: Código do País (55) + DDD + Número (Apenas números)
+        const numeroWhatsApp = "5500999999999"; 
+
+        // Codifica os caracteres especiais e espaços para o formato de URL válido
+        const textoCodificado = encodeURIComponent(textoMensagem);
+        const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${textoCodificado}`;
+
+        // Abre a conversa do WhatsApp em uma nova aba de forma limpa
+        window.open(urlWhatsApp, '_blank');
+    });
+}
 
 /* ==========================================================================
    --- CONTROLE DO SLIDER ANTES E DEPOIS INTERATIVO ---
