@@ -758,3 +758,34 @@ body {
 @media (max-width: 768px) {
     .comparison-container { height: 300px; }
 }
+/* --- CONFIGURAÇÃO PARA TELAS DE CELULAR (ATÉ 768px) --- */
+@media (max-width: 768px) {
+    
+    /* Ajusta a seção principal para não sumir com o fundo e dar respiro */
+    #inicio.hero-section {
+        padding: 40px 20px;
+        min-height: 80vh; /* Deixa a altura confortável no celular */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Diminui o título principal para caber perfeitamente na tela sem quebrar as palavras */
+    #inicio.hero-section h1 {
+        font-size: 2.2rem !important; /* Diminui o tamanho da fonte */
+        line-height: 1.2;
+        letter-spacing: 2px; /* Mantém o estilo sofisticado e espaçado */
+        word-wrap: break-word;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Ajusta o subtítulo dourado (A Estética da Precisão) */
+    #inicio.hero-section .highlight,
+    #inicio.hero-section p {
+        font-size: 1rem !important;
+        letter-spacing: 3px;
+        margin-top: 10px;
+    }
+}
