@@ -9,15 +9,12 @@
 </head>
 <body>
 
-    <!-- ==========================================
-       --- TELA DE INTRODUÇÃO (AUTOMÁTICA) ---
-    ========================================== -->
+    <!-- --- TELA DE INTRODUÇÃO --- -->
     <div class="intro-screen">
         <video autoplay muted loop playsinline>
             <source src="./0_Film_Animation_1920x1080.mp4" type="video/mp4">
         </video>
         <div class="intro-overlay"></div>
-        
         <div class="intro-content-box">
             <h1 class="intro-title">MN ODONTOLOGIA</h1>
             <p class="intro-subtitle">A Estética da Precisão</p>
@@ -32,6 +29,7 @@
         <nav class="nav-menu">
             <a href="#inicio" class="nav-link active">Início</a>
             <a href="#tratamentos" class="nav-link">Tratamentos</a>
+            <a href="#tecnologia" class="nav-link">Tecnologia</a>
             <a href="#consultorio" class="nav-link">O Consultório</a>
             <a href="#contato" class="nav-link contact-btn">Agendar Consulta</a>
         </nav>
@@ -41,7 +39,7 @@
     <section id="inicio" class="hero-section">
         <div class="hero-content">
             <h1>A ARTE DE ESCULPIR <br><span class="highlight">SORRISOS EXCLUSIVOS</span></h1>
-            <p>Unindo alta tecnologia, precisão geométrica e estética avançada para transformar a sua saúde bucal em uma obra de arte.</p>
+            <p>Unindo alta tecnologia, precisão geométrica e estética avançada para transformar a sua saúde bucal in uma obra de arte.</p>
             <a href="#tratamentos" class="btn-primary">Conheça os Tratamentos</a>
         </div>
     </section>
@@ -87,32 +85,56 @@
             </div>
         </div>
     </section>
-    <!-- --- SEÇÃO ANTES E DEPOIS INTERATIVO --- -->
-<section class="before-after-section reveal">
-    <div class="section-title">
-        <h2>A PRECISÃO DO RESULTADO</h2>
-        <div class="line-divider"></div>
-        <p class="subtitle">Arraste a barra central para visualizar a transformação milimétrica.</p>
-    </div>
 
-    <div class="comparison-container">
-        <!-- Foto do Depois (Fica no fundo) -->
-        <div class="image-box after-image">
-            <img src="./depois.jpg" alt="Sorriso Transformado">
+    <!-- --- NOVA SEÇÃO: DIFERENCIAIS TECNOLÓGICOS --- -->
+    <section id="tecnologia" class="tech-section">
+        <div class="section-title reveal">
+            <h2>FLUXO DIGITAL & TECNOLOGIA</h2>
+            <div class="line-divider"></div>
+            <p class="subtitle">A odontologia do futuro guiada por diagnóstico milimétrico tridimensional.</p>
         </div>
-        <!-- Foto do Antes (Fica na frente, recortada pelo JS) -->
-        <div class="image-box before-image">
-            <img src="./antes.jpg" alt="Sorriso Antes">
+        <div class="tech-grid">
+            <div class="tech-card reveal">
+                <div class="tech-icon">// 01</div>
+                <h3>Scanner Intraoral 3D</h3>
+                <p>Adeus aos moldes desconfortáveis de massa. Criamos uma cópia digital idêntica da sua boca em minutos.</p>
+            </div>
+            <div class="tech-card reveal">
+                <div class="tech-icon">// 02</div>
+                <h3>Planejamento Computadorizado</h3>
+                <p>Desenhamos o formato do seu novo sorriso no software antes mesmo de iniciar qualquer procedimento.</p>
+            </div>
+            <div class="tech-card reveal">
+                <div class="tech-icon">// 03</div>
+                <h3>Cirurgia Guiada</h3>
+                <p>Implantes posicionados por computador com cortes mínimos, reduzindo o tempo cirúrgico e o pós-operatório.</p>
+            </div>
         </div>
-        <!-- A Barra de Arrastar -->
-        <div class="slider-handle">
-            <div class="handle-line"></div>
-            <div class="handle-button"><span>&larr;&rarr;</span></div>
-            <div class="handle-line"></div>
+    </section>
+
+    <!-- --- SEÇÃO ANTES E DEPOIS INTERATIVO --- -->
+    <section class="before-after-section reveal">
+        <div class="section-title">
+            <h2>A PRECISÃO DO RESULTADO</h2>
+            <div class="line-divider"></div>
+            <p class="subtitle">Arraste a barra central para visualizar a transformação milimétrica.</p>
         </div>
-        <input type="range" min="0" max="100" value="50" class="slider-input" aria-label="Percentual de revelação da imagem">
-    </div>
-</section>
+
+        <div class="comparison-container">
+            <div class="image-box after-image">
+                <img src="./depois.jpg" alt="Sorriso Transformed">
+            </div>
+            <div class="image-box before-image">
+                <img src="./antes.jpg" alt="Sorriso Antes">
+            </div>
+            <div class="slider-handle">
+                <div class="handle-line"></div>
+                <div class="handle-button"><span>&larr;&rarr;</span></div>
+                <div class="handle-line"></div>
+            </div>
+            <input type="range" min="0" max="100" value="50" class="slider-input" aria-label="Percentual de revelação da imagem">
+        </div>
+    </section>
 
     <!-- --- SEÇÃO O CONSULTÓRIO --- -->
     <section id="consultorio" class="about-section">
@@ -138,6 +160,22 @@
         </div>
     </section>
 
+    <!-- --- NOVA SEÇÃO: O ESPECIALISTA --- -->
+    <section class="expert-section">
+        <div class="expert-container">
+            <div class="expert-image reveal">
+                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=600&auto=format&fit=crop" alt="Especialista MN Odontologia">
+            </div>
+            <div class="expert-text reveal">
+                <span>FILOSOFIA PROFISSIONAL</span>
+                <h2>PRECIOSIDADE EM CADA DETALHE</h2>
+                <div class="line-divider" style="margin: 15px 0 25px 0;"></div>
+                <p>Acreditamos que um sorriso harmônico vai além da estética: envolve simetria matemática e respeito à individualidade de cada rosto.</p>
+                <p>Combinando anos de prática clínica ao domínio técnico dos fluxos digitais tridimensionais, nossa missão é entregar resultados que unem durabilidade biológica ao mais alto padrão de refinamento estético.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- JANELA FLUTUANTE (MODAL) PARA O VÍDEO -->
     <div id="videoModal" class="video-modal">
         <div class="modal-content">
@@ -156,21 +194,21 @@
             <p>Experimente o mais alto padrão em odontologia estética.</p>
             <form id="appointment-form">
                 <div class="input-group">
-                    <input type="text" placeholder="Seu Nome Completo" required>
+                    <input type="text" id="form-name" placeholder="Seu Nome Completo" required>
                 </div>
                 <div class="input-group">
-                    <input type="tel" placeholder="Seu WhatsApp" required>
+                    <input type="tel" id="form-phone" placeholder="Seu WhatsApp" required>
                 </div>
                 <div class="input-group">
-                    <select required>
+                    <select id="form-treatment" required>
                         <option value="" disabled selected>Selecione o Tratamento</option>
-                        <option value="lentes">Lentes de Contato Dental</option>
-                        <option value="implantes">Implantes & Carga Rápida</option>
-                        <option value="invisalign">Invisalign & Ortodontia</option>
-                        <option value="clareamento">Clareamento Avançado</option>
+                        <option value="Lentes de Contato Dental">Lentes de Contato Dental</option>
+                        <option value="Implantes & Carga Rápida">Implantes & Carga Rápida</option>
+                        <option value="Invisalign & Ortodontia">Invisalign & Ortodontia</option>
+                        <option value="Clareamento Avançado">Clareamento Avançado</option>
                     </select>
                 </div>
-                <button type="submit" class="btn-submit">Solicitar Atendimento</button>
+                <button type="submit" class="btn-submit">Solicitar Atendimento via WhatsApp</button>
             </form>
         </div>
     </section>
