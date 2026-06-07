@@ -731,12 +731,30 @@ body {
 /* ==========================================================================
    --- CONFIGURAÇÃO EXCLUSIVA E MEDIA QUERIES PARA CELULAR (ATÉ 768px) ---
    ========================================================================== */
+/* ==========================================================================
+   --- CONFIGURAÇÃO EXCLUSIVA E MEDIA QUERIES PARA CELULAR (ATÉ 768px) ---
+   ========================================================================== */
 @media (max-width: 768px) {
     .header { padding: 20px 5%; }
     .header.scrolled { padding: 12px 5%; }
     .nav-menu { display: none; }
-    .about-glass-container { padding: 30px; }
+    
+    /* Ajusta o espaçamento interno do card transparente para dar mais espaço ao texto */
+    .about-glass-container { 
+        padding: 40px 25px; 
+        width: 100%;
+    }
+    
     .footer { flex-direction: column; gap: 15px; text-align: center; }
+
+    /* --- CORREÇÃO DO TÍTULO "O CONSULTÓRIO" --- */
+    .about-text h2 {
+        font-size: 1.5rem !important;    /* Reduz levemente o tamanho no celular */
+        letter-spacing: 1px !important;  /* Diminui o espaçamento entre letras para a palavra caber unida */
+        line-height: 1.2;
+        white-space: nowrap;             /* Impede que o "O" e o "CONSULTÓRIO" se separem */
+        text-align: left;
+    }
 
     /* Ajuste da Seção Principal do Site */
     #inicio.hero-section {
@@ -773,29 +791,19 @@ body {
         height: 300px;
     }
 
-    /* CORREÇÃO DA TELA DE INTRODUÇÃO MOBILE (TÍTULO INDO PARA FORA DA TELA) */
+    /* CORREÇÃO DA TELA DE INTRODUÇÃO MOBILE */
     .intro-title {
-        font-size: 1.8rem !important;    /* Reduz o tamanho de "MN ODONTOLOGIA" */
-        letter-spacing: 3px !important;  /* Diminui o espaçamento para não cortar nos lados */
+        font-size: 1.8rem !important;    
+        letter-spacing: 3px !important;  
         line-height: 1.3;
         width: 100%;
         text-align: center;
-        word-wrap: break-word;          /* Força uma quebra sutil e elegante */
+        word-wrap: break-word;          
     }
 
     .intro-subtitle {
-        font-size: 0.75rem !important;   /* Ajusta o tamanho de "A ESTÉTICA DA PRECISÃO" */
-        letter-spacing: 2px !important;  /* Evita cortes na borda direita */
+        font-size: 0.75rem !important;   
+        letter-spacing: 2px !important;  
         margin-top: 10px;
-    }
-}
-
-@media (max-width: 800px) {
-    .comparison-container { 
-        height: 350px; 
-    }
-    .image-box img {
-        width: 100vw; 
-        height: 350px;
     }
 }
