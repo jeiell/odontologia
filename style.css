@@ -44,7 +44,6 @@ body {
     transition: all 0.4s ease;
 }
 
-/* Efeito adaptativo ao rolar a página */
 .header.scrolled {
     padding: 15px 8%;
     background: rgba(8, 9, 11, 0.95);
@@ -85,7 +84,6 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Linha tecnológica sutil embaixo dos links ativos */
 .nav-link::after {
     content: '';
     position: absolute;
@@ -111,7 +109,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.contact-btn::after { display: none; } /* Remove linha de baixo do botão */
+.contact-btn::after { display: none; }
 
 .contact-btn:hover {
     background: var(--accent);
@@ -201,9 +199,7 @@ body {
     z-index: -1;
 }
 
-.btn-primary:hover::before {
-    left: 0;
-}
+.btn-primary:hover::before { left: 0; }
 
 /* --- SEÇÃO DE TRATAMENTOS --- */
 .services-section {
@@ -212,7 +208,7 @@ body {
 }
 
 .section-title {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     text-align: center;
 }
 
@@ -245,7 +241,6 @@ body {
     transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Efeito Tecnológico de cantoneira ou scanner ativo no hover */
 .service-card::before {
     content: '';
     position: absolute;
@@ -254,9 +249,7 @@ body {
     transition: left 0.6s ease;
 }
 
-.service-card:hover::before {
-    left: 100%;
-}
+.service-card:hover::before { left: 100%; }
 
 .service-card:hover {
     border-color: rgba(205, 154, 65, 0.4);
@@ -280,9 +273,7 @@ body {
     transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.service-card:hover .card-image img {
-    transform: scale(1.08);
-}
+.service-card:hover .card-image img { transform: scale(1.08); }
 
 .service-card h3 {
     font-size: 1.2rem;
@@ -292,11 +283,62 @@ body {
     transition: color 0.3s ease;
 }
 
-.service-card:hover h3 {
-    color: var(--accent);
-}
+.service-card:hover h3 { color: var(--accent); }
 
 .service-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* --- ESTILIZAÇÃO DA NOVA SEÇÃO DE TECNOLOGIA --- */
+.tech-section {
+    padding: 120px 8%;
+    background: var(--bg-dark);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-card {
+    background: rgba(255, 255, 255, 0.01);
+    border-left: 1px solid var(--accent);
+    border-top: 1px solid var(--border-glass);
+    border-right: 1px solid var(--border-glass);
+    border-bottom: 1px solid var(--border-glass);
+    padding: 40px 30px;
+    transition: all 0.4s ease;
+}
+
+.tech-card:hover {
+    background: rgba(205, 154, 65, 0.02);
+    border-color: var(--accent);
+    transform: scale(1.02);
+}
+
+.tech-icon {
+    font-family: var(--font-title);
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.tech-card h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.tech-card p {
     font-size: 0.9rem;
     color: var(--text-muted);
     line-height: 1.7;
@@ -320,7 +362,6 @@ body {
     background: linear-gradient(90deg, rgba(13, 15, 18, 0.7) 0%, rgba(13, 15, 18, 0.95) 100%);
 }
 
-/* Glassmorphism Refinado Tridimensional */
 .about-glass-container {
     position: relative;
     z-index: 2;
@@ -349,9 +390,7 @@ body {
     font-weight: 200;
 }
 
-.features-list {
-    list-style: none;
-}
+.features-list { list-style: none; }
 
 .features-list li {
     font-size: 0.9rem;
@@ -379,6 +418,67 @@ body {
     color: var(--accent);
     transform: translateX(8px);
     cursor: pointer;
+}
+
+/* --- ESTILIZAÇÃO DA NOVA SEÇÃO DO ESPECIALISTA --- */
+.expert-section {
+    padding: 120px 8%;
+    background: var(--bg-darker);
+}
+
+.expert-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.expert-image {
+    flex: 1;
+    max-width: 450px;
+    border: 1px solid rgba(205, 154, 65, 0.3);
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.expert-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(30%);
+    transition: filter 0.4s ease;
+}
+
+.expert-image:hover img {
+    filter: grayscale(0%);
+}
+
+.expert-text {
+    flex: 1.2;
+}
+
+.expert-text span {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.expert-text h2 {
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.expert-text p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-weight: 300;
 }
 
 /* --- CONTATO E FORMULÁRIO --- */
@@ -412,9 +512,7 @@ body {
     font-weight: 200;
 }
 
-.input-group {
-    margin-bottom: 20px;
-}
+.input-group { margin-bottom: 20px; }
 
 .input-group input, .input-group select {
     width: 100%;
@@ -456,9 +554,7 @@ body {
     transition: all 0.4s ease;
 }
 
-.btn-submit:hover {
-    color: var(--bg-darker);
-}
+.btn-submit:hover { color: var(--bg-darker); }
 
 .btn-submit::before {
     content: '';
@@ -469,9 +565,7 @@ body {
     z-index: -1;
 }
 
-.btn-submit:hover::before {
-    left: 0;
-}
+.btn-submit:hover::before { left: 0; }
 
 /* --- FOOTER --- */
 .footer {
@@ -490,9 +584,7 @@ body {
     letter-spacing: 1px;
 }
 
-/* ==========================================
-   --- TELA DE INTRODUÇÃO (FIXADA) ---
-========================================== */
+/* --- TELA DE INTRODUÇÃO --- */
 .intro-screen {
     position: fixed;
     top: 0; left: 0; bottom: 0; right: 0;
@@ -563,9 +655,7 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ==========================================
-   --- JANELA FLUTUANTE DE VÍDEO (MODAL) ---
-========================================== */
+/* --- JANELA FLUTUANTE DE VÍDEO (MODAL) --- */
 .video-modal {
     display: none;
     position: fixed;
@@ -605,13 +695,9 @@ body {
     transition: color 0.3s ease;
 }
 
-.close-modal:hover {
-    color: var(--accent);
-}
+.close-modal:hover { color: var(--accent); }
 
-/* ==========================================
-   --- EFEITOS DE ANIMAÇÃO COM SCROLL (TECH) ---
-========================================== */
+/* --- EFEITOS DE ANIMAÇÃO COM SCROLL --- */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -652,10 +738,7 @@ body {
 
 .image-box {
     position: absolute;
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     pointer-events: none;
 }
 
@@ -673,19 +756,11 @@ body {
     z-index: 2;
 }
 
-.before-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+.before-image img { position: absolute; top: 0; left: 0; }
 
-/* --- ELEMENTOS DE CONTROLE (BARRA E INPUT) --- */
 .slider-input {
     position: absolute;
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     opacity: 0;
     cursor: ew-resize;
     z-index: 4;
@@ -693,10 +768,7 @@ body {
 
 .slider-handle {
     position: absolute;
-    top: 0; 
-    left: 50%; 
-    height: 100%;
-    width: 2px;
+    top: 0; left: 50%; height: 100%; width: 2px;
     background: #cd9a41; 
     z-index: 3;
     pointer-events: none;
@@ -707,15 +779,10 @@ body {
     align-items: center;
 }
 
-.handle-line {
-    flex-grow: 1;
-    width: 1px;
-    background: #cd9a41;
-}
+.handle-line { flex-grow: 1; width: 1px; background: #cd9a41; }
 
 .handle-button {
-    width: 42px; 
-    height: 42px;
+    width: 42px; height: 42px;
     border-radius: 50%;
     background: #11141b;
     border: 1px solid #cd9a41;
@@ -729,17 +796,13 @@ body {
 }
 
 /* ==========================================================================
-   --- CONFIGURAÇÃO EXCLUSIVA E MEDIA QUERIES PARA CELULAR (ATÉ 768px) ---
-   ========================================================================== */
-/* ==========================================================================
-   --- CONFIGURAÇÃO EXCLUSIVA E MEDIA QUERIES PARA CELULAR (ATÉ 768px) ---
+   --- MEDIA QUERIES PARA CELULAR (ATÉ 768px) ---
    ========================================================================== */
 @media (max-width: 768px) {
     .header { padding: 20px 5%; }
     .header.scrolled { padding: 12px 5%; }
     .nav-menu { display: none; }
     
-    /* Ajusta o espaçamento interno do card transparente para dar mais espaço ao texto */
     .about-glass-container { 
         padding: 40px 25px; 
         width: 100%;
@@ -747,16 +810,15 @@ body {
     
     .footer { flex-direction: column; gap: 15px; text-align: center; }
 
-    /* --- CORREÇÃO DO TÍTULO "O CONSULTÓRIO" --- */
+    /* FIX: Correção do Título "O Consultório" no Poco X7 */
     .about-text h2 {
-        font-size: 1.5rem !important;    /* Reduz levemente o tamanho no celular */
-        letter-spacing: 1px !important;  /* Diminui o espaçamento entre letras para a palavra caber unida */
+        font-size: 1.5rem !important;
+        letter-spacing: 1px !important;
         line-height: 1.2;
-        white-space: nowrap;             /* Impede que o "O" e o "CONSULTÓRIO" se separem */
+        white-space: nowrap;
         text-align: left;
     }
 
-    /* Ajuste da Seção Principal do Site */
     #inicio.hero-section {
         padding: 40px 20px;
         min-height: 80vh; 
@@ -783,15 +845,19 @@ body {
     }
 
     /* Ajuste do Responsivo do Antes e Depois */
-    .comparison-container { 
-        height: 300px; 
-    }
-    .image-box img {
-        width: 100vw; 
-        height: 300px;
-    }
+    .comparison-container { height: 300px; }
+    .image-box img { width: 100vw; height: 300px; }
 
-    /* CORREÇÃO DA TELA DE INTRODUÇÃO MOBILE */
+    /* Ajuste responsivo da nova seção do Especialista */
+    .expert-container {
+        flex-direction: column;
+        gap: 35px;
+        text-align: center;
+    }
+    .expert-image { max-width: 100%; }
+    .expert-text h2 { font-size: 1.7rem; }
+
+    /* Correção da introdução mobile */
     .intro-title {
         font-size: 1.8rem !important;    
         letter-spacing: 3px !important;  
